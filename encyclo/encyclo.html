@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Indian Cow Encyclopedia</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- <link rel="stylesheet" href="cow_encyclopedia.css" /> -->
+</head>
+<body>
+  <header class="main-header">
+    <h1>🐄 Indian Cow Encyclopedia</h1>
+  </header>
+
+  <main class="cow-encyclopedia-page">
+    <section class="hero glass">
+      <h1>Explore Indian Cow Breeds</h1>
+      <p>Discover heritage, health, and harmony — all in one place.</p>
+      <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for a breed..." />
+        <button onclick="searchBreeds()">Search</button>
+      </div>
+    </section>
+
+    <section class="cow-breeds-list">
+      <h2>🐮 Cow Breeds of India</h2>
+      <div class="breed-grid" id="breed-grid">
+        <div class="loading-message">Loading breeds...</div>
+      </div>
+      <button id="load-more-btn" onclick="loadMoreBreeds()">Load More Breeds</button>
+    </section>
+
+    <section class="general-info glass">
+      <h2>🌾 The Significance of Indian Cows</h2>
+      <div class="info-grid">
+        <div>
+          <ul>
+            <li><strong>🕉 Socio-Spiritual:</strong> Sacred symbol in Indian tradition.</li>
+            <li><strong>💰 Economic:</strong> Milk, manure, draught power.</li>
+            <li><strong>🌱 Environmental:</strong> Boosts organic and sustainable farming.</li>
+          </ul>
+        </div>
+        <!-- <div>
+          <img src="cow_info.png" alt="Cow Significance Illustration" class="info-img"/>
+        </div> -->
+      </div>
+    </section>
+  </main>
+
+  <div id="breed-modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close-btn" class="close-btn">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+  
+
+  <footer>
+    <p>&copy; 2025 Indian Cow Conservation Initiative</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

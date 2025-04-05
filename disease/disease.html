@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Disease Diagnosis Form</title>
+    <link rel="stylesheet" href="disease.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Animal Disease Diagnosis Form</h1>
+        <form id="diagnosisForm" onsubmit="event.preventDefault(); diagnoseDisease();">
+            <!-- Input Fields -->
+            <h2>Basic Animal Information</h2>
+            <label for="animalType">Animal Type:</label>
+            <input type="text" id="animalType" required>
+    
+            <label for="breed">Breed:</label>
+            <input type="text" id="breed" required>
+    
+            <label for="age">Age (in years):</label>
+            <input type="number" id="age" required>
+    
+            <label for="gender">Gender:</label>
+            <select id="gender" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+    
+            <label for="weight">Weight (in kg):</label>
+            <input type="number" id="weight" required>
+    
+            <h2>Symptoms Information</h2>
+            <label for="generalSymptoms">General Symptoms:</label>
+            <input type="text" id="generalSymptoms" placeholder="e.g., fever, weakness">
+    
+            <label for="digestiveIssues">Digestive Issues:</label>
+            <input type="text" id="digestiveIssues" placeholder="e.g., diarrhea, bloating">
+    
+            <label for="respiratoryIssues">Respiratory Issues:</label>
+            <input type="text" id="respiratoryIssues" placeholder="e.g., coughing, nasal discharge">
+    
+            <label for="skinIssues">Skin & Physical Signs:</label>
+            <input type="text" id="skinIssues" placeholder="e.g., wounds, hair loss">
+    
+            <label for="reproductiveIssues">Reproductive Issues:</label>
+            <input type="text" id="reproductiveIssues" placeholder="e.g., abortions, vaginal discharge">
+    
+            <label for="neurologicalIssues">Neurological Issues:</label>
+            <input type="text" id="neurologicalIssues" placeholder="e.g., tremors, aggression">
+    
+            <h2>Additional Factors</h2>
+            <label for="calvingHistory">Recent Calving History:</label>
+            <input type="text" id="calvingHistory" placeholder="e.g., postpartum diseases">
+    
+            <label for="diet">Diet & Feeding Habits:</label>
+            <input type="text" id="diet" placeholder="e.g., sudden diet changes">
+    
+            <label for="vaccination">Vaccination & Deworming History:</label>
+            <input type="text" id="vaccination" placeholder="e.g., last vaccination date">
+    
+            <label for="livingConditions">Living Conditions:</label>
+            <input type="text" id="livingConditions" placeholder="e.g., cleanliness, overcrowding">
+    
+            <button type="submit">Diagnose</button>
+        </form>
+    
+        <h2>Diagnosis Result:</h2>
+        <p id="result"></p>
+    
+        <button id="refreshButton" onclick="refreshForm()" style="display: none; margin-top: 15px;">Refresh</button>
+    </div>
+    
+    <script src="disease.js"></script>
+</body>
+</html>
