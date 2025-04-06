@@ -69,21 +69,28 @@ function addVideoCard(videoId, title) {
 }
 function openVideo(videoId) {
   floatingVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1`;
+
+  // Lock scroll
+  document.body.classList.add("modal-open");
+
+  // Show modal centered
   modal.style.display = "flex";
   setTimeout(() => {
     modal.classList.add("show");
-  }, 10); // triggers transition smoothly
+  }, 10);
 }
-
 
 closeModal.addEventListener("click", () => {
   modal.classList.remove("show");
+
+  // Restore scroll
+  document.body.classList.remove("modal-open");
+
   setTimeout(() => {
     modal.style.display = "none";
     floatingVideo.src = "";
-  }, 300); // waits for animation to finish
+  }, 300);
 });
-
 
 searchInput.addEventListener("input", () => {
   videoGrid.innerHTML = "";
