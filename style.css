@@ -155,7 +155,7 @@ body {
     .nav-links {
         display: none;
         flex-direction: column;
-        background-color: #2e7d32;
+        background-color: #D28B2C;
         width: 100%;
         position: absolute;
         top: 60px;
@@ -174,7 +174,7 @@ body {
 
 #news ,#disease,#encyclopedia,#contact{
     padding: 50px 20px;
-    background-color: #388e3c;
+    background-color: #D28B2C;
     margin-bottom: 10px;
     cursor: pointer;
     text-align: center;
@@ -185,7 +185,7 @@ body {
 }
 
 #news:hover, #disease:hover, #encyclopedia:hover, #contact:hover {
-    background-color: #2e7d32;
+    background-color: #D28B2C;
     transform: scale(1.02);
 }
 .site-title {
