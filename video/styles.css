@@ -114,11 +114,26 @@ h2 {
 }
 
 
+/* Disable body scroll when modal is active */
+body.modal-open {
+  overflow: hidden;
+}
+
+/* Modal setup */
 .video-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  display: none;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.3s ease, transform 0.3s ease;
-  display: none;
+  z-index: 9999;
 }
 
 .video-modal.show {
@@ -126,6 +141,7 @@ h2 {
   transform: translateY(0);
   display: flex;
 }
+
 
 
 .modal-content {
