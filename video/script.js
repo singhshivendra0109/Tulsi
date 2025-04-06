@@ -67,24 +67,23 @@ function addVideoCard(videoId, title) {
   card.addEventListener("click", () => openVideo(videoId));
   videoGrid.appendChild(card);
 }
-
 function openVideo(videoId) {
+  floatingVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1`;
+  modal.style.display = "flex";
+  setTimeout(() => {
     modal.classList.add("show");
-    modal.style.display = "flex";
-    setTimeout(() => {
-      modal.classList.add("show");
-    }, 10); // Allow transition to trigger
-    floatingVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&controls=1`;
-    }
+  }, 10); // triggers transition smoothly
+}
+
 
 closeModal.addEventListener("click", () => {
-    modal.classList.remove("show");
-    setTimeout(() => {
-      modal.style.display = "none";
-      floatingVideo.src = "";
-    }, 300);
-    
+  modal.classList.remove("show");
+  setTimeout(() => {
+    modal.style.display = "none";
+    floatingVideo.src = "";
+  }, 300); // waits for animation to finish
 });
+
 
 searchInput.addEventListener("input", () => {
   videoGrid.innerHTML = "";
@@ -95,4 +94,3 @@ searchInput.addEventListener("input", () => {
 
 // Initial load
 fetchVideos();
-
